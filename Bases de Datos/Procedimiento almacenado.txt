@@ -1,0 +1,183 @@
+*** INSERTAR ***
+
+
+create procedure insertarUsuario(
+	in nombre varchar(100),
+	in email varchar(100),
+	in contraseña varchar(50))
+insert into usuario(nombre, email, contraseña) values (nombre, email, contraseña);
+
+
+create procedure insertarCuenta(
+	in idUsuario int,
+	in nombre varchar(50),
+	in tipo varchar(50),
+	in saldo decimal(10, 2))
+insert into cuenta(idUsuario, nombre, tipo, saldo) values (idUsuario, nombre, tipo, saldo);
+
+
+create procedure insertarTransaccion(
+	in idUsuario int,
+	in idCategoria int,
+	in fecha date,
+	in monto decimal(10, 2),
+	in descripcion varchar(200),
+	in tipo varchar(20))
+insert into transaccion(idUsuario, idCategoria, fecha, monto, descripcion, tipo) values (idUsuario, idCategoria, fecha, monto, descripcion, tipo);
+
+
+create procedure insertarPresupuesto(
+	in idUsuario int,
+	in monto decimal(10, 2),
+	in fechaInicio date,
+	in fechaFin date)
+insert into presupuesto(idUsuario, monto, fechaInicio, fechaFin) values (idUsuario, monto, fechaInicio, fechaFin);
+
+create procedure insertarDeuda(
+	in idUsuario int,
+	in descripcion varchar(200),
+	in monto decimal(10, 2),
+	in interes decimal(5, 2),
+	in plazo date)
+insert into deuda(idUsuario, descripcion, monto, interes, plazo) values (idUsuario, descripcion, monto, interes, plazo);
+
+
+___________________________________________________________________________________
+
+
+*** MODIFICAR ***
+
+
+create procedure modificarUsuario(
+	in n_idUsuario int,
+	in n_nombre varchar(100),
+	in n_email varchar(100),
+	in n_contraseña varchar(50))
+update usuario 
+	set nombre = n_nombre,
+	email = n_email,
+	contraseña = n_contraseña
+where idUsuario = n_idUsuario;
+
+
+create procedure modificarCuenta(
+	in n_idCuenta int,
+	in n_nombre varchar(50),
+	in n_tipo varchar(50),
+	in n_saldo decimal(10, 2))
+update cuenta 
+	set nombre = n_nombre,
+	tipo = n_tipo,
+	saldo = n_saldo
+where idCuenta = n_idCuenta;
+
+
+create procedure modificarTransaccion(
+	in n_idTransaccion int,
+	in n_idCategoria int,
+	in n_fecha date,
+	in n_monto decimal(10, 2),
+	in n_descripcion varchar(200),
+	in n_tipo varchar(20))
+update transaccion 
+	set idCategoria = n_idCategoria, 
+	fecha = n_fecha, 
+	monto = n_monto, 
+	descripcion = n_descripcion,
+	tipo = n_tipo
+where idTransaccion = n_idTransaccion;
+
+
+create procedure modificarPresupuesto(
+	in n_idPresupuesto int,
+	in n_monto decimal(10, 2),
+	in n_fechaInicio date,
+	in n_fechaFin date)
+update presupuesto
+	set monto = n_monto,
+        fechaInicio = n_fechaInicio,
+        fechaFin = n_fechaFin
+where idPresupuesto = n_idPresupuesto;
+
+
+
+create procedure modificarDeuda(
+	in n_idDeuda int,
+	in n_descripcion varchar(200),
+	in n_monto decimal(10, 2),
+	in n_interes decimal(5, 2),
+	in n_plazo date)
+update deuda 
+	set descripcion = n_descripcion,
+	monto = n_monto,
+	interes = n_interes,
+	plazo = n_plazo
+where idDeuda = n_idDeuda;
+
+
+___________________________________________________________________________________
+
+
+*** OBTENER ***
+
+
+create procedure obtenerUsuario(
+	in o_idUsuario int)
+select nombre, email, contraseña from usuario 
+	where idUsuario = o_idUsuario;
+
+
+create procedure obtenerCuenta(
+	in o_idUsuario int)
+select idCuenta, nombre, tipo, saldo from cuenta
+	where idUsuario = o_idUsuario;
+
+
+create procedure obtenerTransaccion(
+	in o_idUsuario int)
+select idTransaccion, idCategoria, fecha, monto, descripcion, tipo from transaccion
+	where idUsuario = o_idUsuario;
+
+
+create procedure obtenerPresupuesto(
+	in o_idUsuario int)
+select idPresupuesto, monto, fechaInicio, fechaFin from presupuesto
+	where idUsuario = o_idUsuario;
+
+
+create procedure obtenerDeuda(
+	in o_idUsuario int)
+select idDeuda, descripcion, monto, interes, plazo from deuda
+	where idusuario = o_idUsuario;
+
+
+___________________________________________________________________________________
+
+
+*** ELIMINAR ***
+
+
+create procedure eliminarUsuario(
+	in e_idUsuario int)
+	delete from usuario where idUsuario = e_idUsuario;
+    
+
+create procedure eliminarCuenta(
+	in e_idUsuario int)
+	delete from cuenta where idUsuario = e_idUsuario;    
+    
+
+create procedure eliminarTransaccion(
+	in e_idUsuario int)
+	delete from transaccion where idUsuario = e_idUsuario;
+
+
+create procedure eliminarPresupuesto(
+	in e_idUsuario int)
+	delete from presupuesto where idUsuario = e_idUsuario;
+
+
+create procedure eliminarDeuda(
+	in e_idUsuario int)
+	delete from deuda where idUsuario = e_idUsuario;
+

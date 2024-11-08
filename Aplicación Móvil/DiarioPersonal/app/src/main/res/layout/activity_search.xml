@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Activity_Search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <RelativeLayout
+        android:id="@+id/RelativeSuperiorB"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/CardBuscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/dark_grey"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardElevation="0dp">
+
+            <LinearLayout
+                android:id="@+id/LayoutBuscar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ImagenBuscar"
+                    android:layout_width="55dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/white"
+                    android:backgroundTint="@color/yellow"
+                    app:srcCompat="@mipmap/lupa" />
+
+                <EditText
+                    android:id="@+id/EdTxtBuscar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/ImagenBuscar"
+                    android:background="@color/dark_grey"
+                    android:contentDescription="Search field"
+                    android:ems="10"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="@font/tajawal_bold"
+                    android:gravity="center_vertical"
+                    android:hint="Buscar por fecha..."
+                    android:imeOptions="actionSearch"
+                    android:importantForAccessibility="yes"
+                    android:inputType="text"
+                    android:paddingEnd="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/light_yellow"
+                    android:textColorHighlight="@color/light_brown"
+                    android:textColorHint="@color/light_purple"
+                    android:textCursorDrawable="@color/dark_blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeDiarioB"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/light_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RelativeSuperiorB">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerDiarioB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"></androidx.recyclerview.widget.RecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/RelativeMenu"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/grey_border">
+
+            <Button
+                android:id="@+id/BtnEditar"
+                android:layout_width="75dp"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/light_purple"
+                android:fontFamily="@font/tajawal_bold"
+                app:icon="@android:drawable/ic_menu_edit"
+                app:iconGravity="start"
+                app:iconSize="30dp"
+                app:iconTint="@color/dark_blue" />
+
+            <Button
+                android:id="@+id/BtnEliminar"
+                android:layout_width="75dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@android:color/system_error_dark"
+                android:fontFamily="@font/tajawal_bold"
+                app:icon="@android:drawable/ic_menu_delete"
+                app:iconGravity="start"
+                app:iconSize="30dp"
+                app:iconTint="@color/design_default_color_error" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "887178760173",
+    "project_id": "diariopersonalgp",
+    "storage_bucket": "diariopersonalgp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887178760173:android:5c5814e6ffb197ec8521e4",
+        "android_client_info": {
+          "package_name": "com.example.diariopersonal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "887178760173-gr31e512466nlq0shg55801o800ppflm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj60SdxGcZx7YLKC3sna1qbkWHkZEb5FE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "887178760173-gr31e512466nlq0shg55801o800ppflm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

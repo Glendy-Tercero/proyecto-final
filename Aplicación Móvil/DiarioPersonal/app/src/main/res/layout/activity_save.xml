@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Activity_Save"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <RelativeLayout
+        android:id="@+id/RelativeFondoG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/RelativeGuardar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/white_dotted_border"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/TxtFechaG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/yatra_one"
+                android:text="Fecha"
+                android:textColor="@color/purple"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EdTxtFecha"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TxtFechaG"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/white"
+                android:backgroundTint="@color/yellow_white"
+                android:ems="10"
+                android:fontFamily="@font/balsamiq_sans"
+                android:hint="dd-mm-aaaa"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textColor="@color/dark_grey"
+                android:textColorHighlight="@color/yellow"
+                android:textColorHint="@color/yellow_1"
+                android:textCursorDrawable="@color/black" />
+
+            <TextView
+                android:id="@+id/TxtHoraG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/EdTxtFecha"
+                android:fontFamily="@font/yatra_one"
+                android:text="Hora"
+                android:textColor="@color/purple"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EdTxtHora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TxtHoraG"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@+id/EdTxtFecha"
+                android:background="@drawable/white"
+                android:backgroundTint="@color/yellow_white"
+                android:ems="10"
+                android:fontFamily="@font/balsamiq_sans"
+                android:hint="24:00"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textColor="@color/dark_grey"
+                android:textColorHighlight="@color/yellow"
+                android:textColorHint="@color/yellow_1"
+                android:textCursorDrawable="@color/black" />
+
+            <TextView
+                android:id="@+id/TxtUbicacionG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/EdTxtFecha"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/yatra_one"
+                android:text="Ubicación"
+                android:textColor="@color/purple"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EdTxtUbicacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TxtUbicacionG"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/white"
+                android:backgroundTint="@color/yellow_white"
+                android:ems="10"
+                android:fontFamily="@font/balsamiq_sans"
+                android:hint="¿Dónde ocurrió?"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textColor="@color/dark_grey"
+                android:textColorHighlight="@color/yellow"
+                android:textColorHint="@color/yellow_1"
+                android:textCursorDrawable="@color/black" />
+
+            <TextView
+                android:id="@+id/TxtDescripcionG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/EdTxtUbicacion"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/yatra_one"
+                android:text="Descripción"
+                android:textColor="@color/purple"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EdTxtDescripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@+id/TxtDescripcionG"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/white"
+                android:backgroundTint="@color/yellow_white"
+                android:ems="10"
+                android:fontFamily="@font/balsamiq_sans"
+                android:gravity="start|top"
+                android:hint="Escribe una situación del día."
+                android:inputType="textMultiLine"
+                android:justificationMode="inter_word"
+                android:padding="5dp"
+                android:textColor="@color/dark_grey"
+                android:textColorHighlight="@color/yellow"
+                android:textColorHint="@color/yellow_1"
+                android:textCursorDrawable="@color/black" />
+
+            <TextView
+                android:id="@+id/TxtImagen"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/EdTxtDescripcion"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/white"
+                android:backgroundTint="?attr/colorPrimaryFixed"
+                android:fontFamily="@font/tajawal_bold"
+                android:gravity="center"
+                android:text="Nueva imagen +"
+                android:textColor="@color/purple"
+                android:textSize="18sp" />
+
+
+            <LinearLayout
+                android:id="@+id/LayoutImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/BtnGuardar"
+                android:layout_below="@+id/TxtImagen"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CardBuscar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/white"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/NuevaImagen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/material_dynamic_neutral90"
+                        tools:srcCompat="@tools:sample/avatars" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/BtnGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/yellow"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="Guardar"
+                android:textColor="@color/light_brown"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/TxtDireccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/EdTxtDescripcion"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/TxtImagen"
+                android:fontFamily="@font/yatra_one"
+                android:text="Direccion"
+                android:textColor="@color/purple"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/TxtKey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/EdTxtDescripcion"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_toEndOf="@+id/TxtImagen"
+                android:fontFamily="@font/yatra_one"
+                android:text="Key"
+                android:textColor="@color/purple"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

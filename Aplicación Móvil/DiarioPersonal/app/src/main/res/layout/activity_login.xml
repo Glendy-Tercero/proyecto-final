@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".LoginActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/RelativeFondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ImageIcono"
+            android:layout_width="110dp"
+            android:layout_height="105dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:src="@mipmap/libro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/TxtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="60dp"
+            android:layout_toEndOf="@+id/ImageIcono"
+            android:fontFamily="@font/bangers"
+            android:gravity="center"
+            android:text="Diaro Personal"
+            android:textColor="@color/light_purple"
+            android:textSize="25sp"
+            app:layout_constraintStart_toEndOf="@+id/ImageIcono"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/LayoutRegister"
+            android:layout_width="0dp"
+            android:layout_height="340dp"
+            android:layout_below="@+id/ImageIcono"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/yellow_dotted_border"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ImageIcono">
+
+            <TextView
+                android:id="@+id/TxtRegistrase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/yatra_one"
+                android:gravity="center"
+                android:text="Crear Cuenta"
+                android:textColor="@color/dark_grey"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <View
+                android:id="@+id/dividerR"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/TxtRegistrase"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="?android:attr/listDivider"
+                android:backgroundTint="@color/black"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/EdTxtNuevoEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/dividerR"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/white"
+                android:ems="10"
+                android:fontFamily="@font/balsamiq_sans"
+                android:hint="Ingrese un Email"
+                android:inputType="textEmailAddress"
+                android:padding="5dp"
+                android:textColor="@color/dark_grey"
+                android:textColorHighlight="@color/yellow"
+                android:textColorHint="@color/yellow_1"
+                android:textCursorDrawable="@color/black" />
+
+            <EditText
+                android:id="@+id/EdTxtNuevaContra"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/EdTxtNuevoEmail"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/white"
+                android:ems="10"
+                android:fontFamily="@font/balsamiq_sans"
+                android:hint="Contraseña"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textColor="@color/dark_grey"
+                android:textColorHighlight="@color/yellow"
+                android:textColorHint="@color/yellow_1"
+                android:textCursorDrawable="@color/black" />
+
+            <Button
+                android:id="@+id/BtnCrear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/yellow"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="Crear"
+                android:textColor="@color/light_brown"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayoutLogin"
+            android:layout_width="0dp"
+            android:layout_height="340dp"
+            android:layout_below="@+id/ImageIcono"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/yellow_dotted_border"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ImageIcono">
+
+            <TextView
+                android:id="@+id/TxtIniciarSesion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/yatra_one"
+                android:gravity="center"
+                android:text="Iniciar Sesión"
+                android:textColor="@color/dark_grey"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <View
+                android:id="@+id/dividerL"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/TxtIniciarSesion"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="?android:attr/listDivider"
+                android:backgroundTint="@color/black"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/EdTxtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/dividerL"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/white"
+                android:ems="10"
+                android:fontFamily="@font/balsamiq_sans"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="5dp"
+                android:textColor="@color/dark_grey"
+                android:textColorHighlight="@color/yellow"
+                android:textColorHint="@color/yellow_1"
+                android:textCursorDrawable="@color/black" />
+
+            <EditText
+                android:id="@+id/EdTxtContra"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/EdTxtEmail"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/white"
+                android:ems="10"
+                android:fontFamily="@font/balsamiq_sans"
+                android:hint="••••••••"
+                android:inputType="textPassword"
+                android:padding="5dp"
+                android:textColor="@color/dark_grey"
+                android:textColorHighlight="@color/yellow"
+                android:textColorHint="@color/yellow_1"
+                android:textCursorDrawable="@color/black" />
+
+            <Button
+                android:id="@+id/BtnEntrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/yellow"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="Entrar"
+                android:textColor="@color/light_brown"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayoutButton"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/white"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/BtnGoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/dark_blue"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="Continuar con Google"
+                android:textColor="@color/yellow_white"
+                android:textSize="16sp"
+                app:icon="@drawable/googleg_standard_color_18"
+                app:iconPadding="6dp"
+                app:iconSize="24dp"
+                app:iconTint="@color/yellow" />
+
+            <Button
+                android:id="@+id/BtnIniciar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/BtnGoogle"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/purple"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="Iniciar Sesión"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/BtnRegistrarse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/BtnIniciar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/purple"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="Registrarse"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

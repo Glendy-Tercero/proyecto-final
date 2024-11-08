@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/balsamiq_sans</item>
+        <item>@font/bangers</item>
+        <item>@font/tajawal_bold</item>
+        <item>@font/vast_shadow</item>
+        <item>@font/yatra_one</item>
+    </array>
+</resources>

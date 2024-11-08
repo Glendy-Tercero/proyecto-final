@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Activity_Diary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <RelativeLayout
+        android:id="@+id/RelativeSuperior"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@color/dark_grey"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/TxtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_below="@+id/divider"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toStartOf="@+id/BtnNuevo"
+            android:background="@drawable/white_dotted_border"
+            android:fontFamily="@font/bangers"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:text="Tu Diario"
+            android:textColor="@color/purple"
+            android:textSize="24sp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="230dp"
+            android:layout_height="2dp"
+            android:layout_below="@+id/TxtEmail"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/material_dynamic_neutral50"
+            android:backgroundTint="@color/material_dynamic_neutral50"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/TxtEmail"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="center"
+            android:text="name@example.com"
+            android:textColor="@color/yellow_white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/BtnBuscar"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/divider"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/grey_border"
+            android:backgroundTint="@color/light_purple"
+            android:padding="10dp"
+            android:src="@android:drawable/ic_menu_search" />
+
+        <ImageView
+            android:id="@+id/BtnNuevo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/divider"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_toStartOf="@+id/BtnBuscar"
+            android:background="@drawable/grey_border"
+            android:backgroundTint="@color/light_purple"
+            android:padding="10dp"
+            android:src="@android:drawable/ic_menu_add" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeDiario"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/light_yellow"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RelativeSuperior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerDiario"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"></androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
